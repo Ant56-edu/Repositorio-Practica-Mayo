@@ -1,0 +1,22 @@
+package controladores;
+
+import java.util.ArrayList;
+import java.util.List;
+import dtos.CitaDto;
+import servicios.MenuImplementacion;
+import servicios.MenuInterfaz;
+import servicios.RegistroInterfaz;
+
+public class Inicio {
+
+	
+    public static List<CitaDto> lista = new ArrayList<>();
+	
+	public static void main(String[] args) {
+		
+		MenuInterfaz menuInterfaz = new MenuImplementacion();
+	    RegistroInterfaz registroInterfaz = new RegistroImplementacion();
+	    
+	}
+
+}

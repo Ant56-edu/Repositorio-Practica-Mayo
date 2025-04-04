@@ -13,3 +13,18 @@
 /home/profesor/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/edu.clinicas.pdb
 /home/profesor/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/edu.clinicas.genruntimeconfig.cache
 /home/profesor/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/ref/edu.clinicas.dll
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/bin/Debug/net9.0/edu.clinicas
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/bin/Debug/net9.0/edu.clinicas.deps.json
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/bin/Debug/net9.0/edu.clinicas.runtimeconfig.json
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/bin/Debug/net9.0/edu.clinicas.dll
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/bin/Debug/net9.0/edu.clinicas.pdb
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/edu.clinicas.GeneratedMSBuildEditorConfig.editorconfig
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/edu.clinicas.AssemblyInfoInputs.cache
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/edu.clinicas.AssemblyInfo.cs
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/edu.clinicas.csproj.CoreCompileInputs.cache
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/edu.clinicas.sourcelink.json
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/edu.clinicas.dll
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/refint/edu.clinicas.dll
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/edu.clinicas.pdb
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/edu.clinicas.genruntimeconfig.cache
+/home/profesor/Carpeta repositorio/Workspace-Mayo/edu.clinicas/obj/Debug/net9.0/ref/edu.clinicas.dll

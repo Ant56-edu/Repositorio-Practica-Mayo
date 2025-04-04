@@ -1,0 +1,17 @@
+package controladores;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Inicio {
+
+	static MenuInterfaz menuInterfaz = new MenuImplementacion();
+    static RegistroInterfaz registroInterfaz = new RegistroImplementacion();
+    public static List<CitaDto> lista = new ArrayList<E>();
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

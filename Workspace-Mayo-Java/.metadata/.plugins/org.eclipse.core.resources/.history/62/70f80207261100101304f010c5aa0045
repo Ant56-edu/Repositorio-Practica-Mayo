@@ -1,0 +1,9 @@
+package servicios;
+
+public interface IRegistroInterfaz
+{
+	void LeerArchivo();
+
+	void EscribirRegistro(CitaDto cita);
+
+}

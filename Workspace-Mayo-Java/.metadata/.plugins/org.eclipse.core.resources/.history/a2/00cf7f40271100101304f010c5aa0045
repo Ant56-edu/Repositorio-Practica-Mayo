@@ -1,0 +1,76 @@
+package servicios;
+
+public class MenuImplementacion implements MenuInterfaz {
+	OperativaInterfaz operativaInterfaz = new OperativaImplementacion();
+    byte optUser = 0;
+
+    public void MostrarMenu()
+    {
+        boolean esCerrado = false;
+        do
+        {
+            System.out.println("----------------------------");
+            Console.WriteLine("1. Registrar llegada");
+            Console.WriteLine("2. Listado de consultas");
+            Console.WriteLine("----------------------------");
+            optUser = Convert.ToByte(Console.ReadLine());
+            switch (optUser)
+            {
+                case 1:
+                    {
+                        operativaInterfaz.RegistroLlegada();
+                        break;
+                    }
+                case 2:
+                    {
+                        MostrarSubmenu();
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("Esta opción no existe. Elija una de las mostradas en el menú.");
+                        break;
+                    }
+            }
+        } while (!esCerrado);
+    }
+
+    public void MostrarSubmenu()
+    {
+        bool esCerrado = false;
+        do
+        {
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("0. Volver");
+            Console.WriteLine("1. Mostrar consultas");
+            Console.WriteLine("2. Imprimir consultas");
+            Console.WriteLine("----------------------------");
+            optUser = Convert.ToByte(Console.ReadLine());
+            switch (optUser)
+            {
+                case 0:
+                    {
+                        esCerrado = true;
+                        break;
+                    }
+                case 1:
+                    {
+                        operativaInterfaz.MostrarConsultas();
+                        esCerrado = true;
+                        break;
+                    }
+                case 2:
+                    {
+                        operativaInterfaz.ImprimirConsultas();
+                        esCerrado = true;
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("Esta opción no existe. Elija una de las mostradas en el menú.");
+                        break;
+                    }
+            }
+        } while (!esCerrado);
+    }
+}

@@ -1,0 +1,10 @@
+package servicios;
+
+public interface OperativaInterfaz {
+	void ImprimirConsultas();
+
+   void MostrarConsultas();
+
+   void RegistroLlegada();
+
+}

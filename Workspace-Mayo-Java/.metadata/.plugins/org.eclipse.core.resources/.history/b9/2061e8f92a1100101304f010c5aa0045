@@ -1,0 +1,37 @@
+package servicios;
+
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalDateTime;
+
+import controladores.Inicio;
+import dtos.CitaDto;
+
+public class RegistroImplementacion implements RegistroInterfaz{
+	public void LeerArchivo()
+    {
+        CitaDto cdto = new CitaDto();
+        Path ruta = Paths.get("citas.txt");
+        for (String linea : Files.readAllLines(ruta)) {
+            String[] elementos = linea.split(";");
+            cdto.setId(Inicio.lista.size());
+            cdto.setDni(elementos[0]);
+            cdto.setNombre(elementos[1]);
+            String[] apellidosArray = elementos[2].split(" ");
+            cdto.setApellido1(apellidosArray[0]);
+            cdto.setApellido2(apellidosArray[1]);
+            cdto.setConsulta(elementos[3]);
+            cdto.setFechaConsulta(LocalDateTime.parse(elementos[4]));
+            cdto.setAsistencia(Boolean.(elementos[5]));
+            Inicio.lista.Add(cdto);
+        }
+    }
+
+    public void EscribirRegistro(CitaDto cita) {
+        StreamWriter writer = new StreamWriter("citasConAsistencia-" + cita.FechaConsulta.ToString("dd-MM-yyyy") + "log.txt");
+        writer.WriteLine(cita.ToString());
+        writer.Close();
+    }
+}

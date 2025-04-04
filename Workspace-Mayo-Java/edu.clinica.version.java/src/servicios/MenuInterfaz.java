@@ -1,0 +1,9 @@
+package servicios;
+
+public interface MenuInterfaz {
+	
+    void MostrarMenu();
+
+    void MostrarSubmenu();
+
+}

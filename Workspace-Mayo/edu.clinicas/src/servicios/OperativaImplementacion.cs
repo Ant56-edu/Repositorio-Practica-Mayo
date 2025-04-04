@@ -227,7 +227,6 @@ class OperativaImplementacion : IOperativaInterfaz
 
     public void RegistroLlegada()
     {
-        string consulta = "aaaaa";
         Boolean encontrado = false;
         Boolean cerrado = false;
         do

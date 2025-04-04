@@ -1,0 +1,18 @@
+package dtos;
+
+public class CitaDto {
+	long id;
+    String nombre = "aaaaa";
+    String apellido1 = "aaaaa";
+    String apellido2 = "aaaaa";
+    String dni = "aaaaa";
+    String consulta = "aaaaa";
+    LocalDateTime fechaConsulta;
+
+    Boolean asistencia = false;
+    @Override
+    public String toString()
+    {
+        return "Nombre completo: " + nombre + " " + apellido1 + " " + apellido2 + ", Hora: " + fechaConsulta.ToString("hh:mm");
+    }
+}

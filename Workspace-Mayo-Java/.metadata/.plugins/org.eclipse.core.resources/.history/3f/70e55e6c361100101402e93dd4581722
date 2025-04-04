@@ -1,0 +1,319 @@
+package servicios;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import controladores.Inicio;
+import dtos.CitaDto;
+
+public class OperativaImplementacion implements OperativaInterfaz{
+	RegistroInterfaz registroInterfaz = new RegistroImplementacion();
+
+    public void ImprimirConsultas()
+    {
+        byte optUser = 0;
+        boolean esCerrado = false;
+        boolean encontrado = false;
+        String especialidad;
+        do
+        {
+        	System.out.println("-------------------");
+        	System.out.println("0. Psicología");
+        	System.out.println("1. Traumatología");
+        	System.out.println("2. Fisioterapia");
+        	System.out.println("-------------------");
+
+            optUser = Inicio.entrada.nextByte();
+            switch (optUser)
+            {
+                case 0:
+                    {
+                        System.out.println("Elija una fecha (dd/MM/yyyy):");
+                        String fecha = Inicio.entrada.next();
+                        especialidad = "Psicología";
+                        for (CitaDto cita : Inicio.lista)
+                        {
+                            if (cita.getFechaConsulta().getDayOfMonth() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getDayOfMonth() &&
+                            		cita.getFechaConsulta().getMonth() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getMonth() && 
+                            		cita.getFechaConsulta().getYear() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getYear() && 
+                            		cita.getConsulta().equals(especialidad))
+                            {
+                                registroInterfaz.EscribirRegistro(cita);
+                                encontrado = true;
+                                break;
+                            }
+                            else
+                            {
+                                encontrado = false;
+                            }
+                        }
+                        if (!encontrado)
+                        {
+                        	System.out.println("No hay datos disponibles para la especialidad y fecha indicada.");
+                        }
+                        esCerrado = true;
+                        break;
+                    }
+
+                case 1:
+                    {
+                        System.out.println("Elija una fecha (dd/MM/yyyy):");
+                        String fecha = Inicio.entrada.next();
+                        especialidad = "Traumatología";
+                        for (CitaDto cita : Inicio.lista)
+                        {
+                            if (cita.getFechaConsulta().getDayOfMonth() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getDayOfMonth() &&
+                            		cita.getFechaConsulta().getMonth() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getMonth() && 
+                            		cita.getFechaConsulta().getYear() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getYear() && 
+                            		cita.getConsulta().equals(especialidad))
+                            {
+                                registroInterfaz.EscribirRegistro(cita);
+                                encontrado = true;
+                                break;
+                            }
+                            else
+                            {
+                                encontrado = false;
+                            }
+                        }
+                        if (!encontrado)
+                        {
+                        	System.out.println("No hay datos disponibles para la especialidad y fecha indicada.");
+                        }
+                        esCerrado = true;
+                        break;
+                    }
+
+                case 2:
+                    {
+                    	System.out.println("Elija una fecha (dd/MM/yyyy):");
+                        String fecha = Inicio.entrada.next();
+                        especialidad = "Fisioterapia";
+                        for (CitaDto cita : Inicio.lista)
+                        {
+                            if (cita.getFechaConsulta().getDayOfMonth() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getDayOfMonth() &&
+                            		cita.getFechaConsulta().getMonth() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getMonth() && 
+                            		cita.getFechaConsulta().getYear() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getYear() && 
+                            		cita.getConsulta().equals(especialidad))
+                            {
+                                registroInterfaz.EscribirRegistro(cita);
+                                encontrado = true;
+                                break;
+                            }
+                            else
+                            {
+                                encontrado = false;
+                            }
+                        }
+                        if (!encontrado)
+                        {
+                        	System.out.println("No hay datos disponibles para la especialidad y fecha indicada.");
+                        }
+                        esCerrado = true;
+                        break;
+                    }
+
+                default:
+                    {
+                        System.out.println("Esta opción no existe. Elija una de las mostradas en el menú.");
+                        break;
+                    }
+            }
+
+        } while (!esCerrado);
+    }
+
+    public void MostrarConsultas()
+    {
+        byte optUser = 0;
+        boolean esCerrado = false;
+        boolean encontrado = false;
+        String especialidad;
+        do
+        {
+        	System.out.println("-------------------");
+        	System.out.println("0. Psicología");
+        	System.out.println("1. Traumatología");
+        	System.out.println("2. Fisioterapia");
+        	System.out.println("-------------------");
+            optUser = Inicio.entrada.nextByte();
+            switch (optUser)
+            {
+                case 0:
+                    {
+                    	System.out.println("Elija una fecha (dd/MM/yyyy):");
+                        String fecha = Inicio.entrada.next();
+                        especialidad = "Fisioterapia";
+                        for (CitaDto cita : Inicio.lista)
+                        {
+                            if (cita.getFechaConsulta().getDayOfMonth() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getDayOfMonth() &&
+                            		cita.getFechaConsulta().getMonthValue() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getMonthValue() && 
+                            		cita.getFechaConsulta().getYear() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getYear() && 
+                            		cita.getConsulta().equals(especialidad))
+                            {
+                                System.out.println(cita.toString());
+                                encontrado = true;
+                                break;
+                            }
+                            else
+                            {
+                                encontrado = false;
+                            }
+                        }
+                        if (!encontrado)
+                        {
+                            System.out.println("No hay datos disponibles para la especialidad y fecha indicada.");
+                        }
+                        esCerrado = true;
+                        break;
+                    }
+
+                case 1:
+                    {
+                    	System.out.println("Elija una fecha (dd/MM/yyyy):");
+                        String fecha = Inicio.entrada.next();
+                        especialidad = "Fisioterapia";
+                        for (CitaDto cita : Inicio.lista)
+                        {
+                            if (cita.getFechaConsulta().getDayOfMonth() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getDayOfMonth() &&
+                            		cita.getFechaConsulta().getMonthValue() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getMonthValue() && 
+                            		cita.getFechaConsulta().getYear() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getYear() && 
+                            		cita.getConsulta().equals(especialidad))
+                            {
+                                System.out.println(cita.toString());
+                                encontrado = true;
+                                break;
+                            }
+                            else
+                            {
+                                encontrado = false;
+                            }
+                        }
+                        if (!encontrado)
+                        {
+                            System.out.println("No hay datos disponibles para la especialidad y fecha indicada.");
+                        }
+                        esCerrado = true;
+                        break;
+                    }
+
+                case 2:
+                    {
+                    	System.out.println("Elija una fecha (dd/MM/yyyy):");
+                        String fecha = Inicio.entrada.next();
+                        especialidad = "Fisioterapia";
+                        for (CitaDto cita : Inicio.lista)
+                        {
+                            if (cita.getFechaConsulta().getDayOfMonth() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getDayOfMonth() &&
+                            		cita.getFechaConsulta().getMonth() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getMonth() && 
+                            		cita.getFechaConsulta().getYear() == LocalDate.parse(fecha, DateTimeFormatter.ofPattern("dd/MM/yyyy")).getYear() && 
+                            		cita.getConsulta().equals(especialidad))
+                            {
+                                System.out.println(cita.toString());
+                                encontrado = true;
+                                break;
+                            }
+                            else
+                            {
+                                encontrado = false;
+                            }
+                        }
+                        if (!encontrado)
+                        {
+                            System.out.println("No hay datos disponibles para la especialidad y fecha indicada.");
+                        }
+                        esCerrado = true;
+                        break;
+                    }
+
+                default:
+                    {
+                        System.out.println("Esta opción no existe. Elija una de las mostradas en el menú.");
+                        break;
+                    }
+
+            }
+        } while (!esCerrado);
+    }
+
+    public void RegistroLlegada()
+    {
+        boolean encontrado = false;
+        boolean cerrado = false;
+        do
+        {
+            System.out.println("Introduzca su DNI: ");
+            String dni = Inicio.entrada.next();
+            if (VerificarDni(dni) == true)
+            {
+                for (CitaDto cita : Inicio.lista)
+                {
+                    if (cita.getDni() == dni)
+                    {
+                        System.out.println("Espere su turno para la consulta de " + cita.getConsulta() + " en la sala de espera. Su especialista le avisará.");
+                        encontrado = true;
+                        break;
+                    }
+                }
+
+                if (!encontrado)
+                {
+                	System.out.println("No dispone de cita previa para hoy.");
+                }
+
+                cerrado = true;
+            }
+            else
+            {
+            	System.out.println("Este DNI no es válido.");
+            }
+        } while (!cerrado);
+    }
+
+    public Boolean VerificarDni(String dniAComprobar)
+    {
+        Boolean valido;
+
+        char[] letraDni = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V',
+                'H', 'L', 'C', 'K', 'E' };
+
+        String num = "";
+
+
+        if (dniAComprobar.length() == 8)
+        {
+            dniAComprobar = "0" + dniAComprobar;
+        }
+
+        if (!Character.isLetter(dniAComprobar.charAt(8))) {
+            valido = false;  
+       }
+
+        if (dniAComprobar.length() != 9)
+        {
+            valido = false;
+        }
+
+        for (int i = 0; i < 8; i++)
+        {
+
+            if (!Character.isDigit(dniAComprobar.charAt(i)))
+            {
+                valido = false;
+            }
+
+            num += dniAComprobar.charAt(i);
+        }
+
+        int ind = Integer.parseInt(num);
+        ind %= 23;
+
+        if (Character.toUpperCase(dniAComprobar.charAt(8)) != letraDni[ind])
+        {
+            valido = false;
+        }
+        valido = true;
+
+        return valido;
+    }
+}
