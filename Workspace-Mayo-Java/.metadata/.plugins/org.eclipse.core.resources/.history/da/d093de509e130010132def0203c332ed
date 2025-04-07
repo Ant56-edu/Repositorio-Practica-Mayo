@@ -6,7 +6,7 @@ public class MenuImplementacion implements MenuInterfaz {
 	OperativaInterfaz operativaInterfaz = new OperativaImplementacion();
     byte optUser = 0;
 
-    public void mostrarMenu()
+    public void MostrarMenu()
     {
         boolean esCerrado = false;
         do
@@ -25,7 +25,7 @@ public class MenuImplementacion implements MenuInterfaz {
                     }
                 case 2:
                     {
-                        mostrarSubmenu();
+                        MostrarSubmenu();
                         break;
                     }
                 default:
@@ -37,7 +37,7 @@ public class MenuImplementacion implements MenuInterfaz {
         } while (!esCerrado);
     }
 
-    public void mostrarSubmenu()
+    public void MostrarSubmenu()
     {
         boolean esCerrado = false;
         do

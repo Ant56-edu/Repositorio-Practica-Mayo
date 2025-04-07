@@ -32,7 +32,7 @@ public class OperativaImplementacion implements OperativaInterfaz {
 				for (CitaDto cita : Inicio.lista) {
 					if (cita.getFechaConsulta().toLocalDate().equals(LocalDate.of(anyo, mes, dia))
 							&& cita.getConsulta().equals(especialidad)) {
-						registroInterfaz.escribirRegistro(cita);
+						registroInterfaz.EscribirRegistro(cita);
 						encontrado = true;
 						break;
 					} else {
@@ -57,7 +57,7 @@ public class OperativaImplementacion implements OperativaInterfaz {
 				for (CitaDto cita : Inicio.lista) {
 					if (cita.getFechaConsulta().toLocalDate().equals(LocalDate.of(anyo, mes, dia))
 							&& cita.getConsulta().equals(especialidad)) {
-						registroInterfaz.escribirRegistro(cita);
+						registroInterfaz.EscribirRegistro(cita);
 						encontrado = true;
 						break;
 					} else {
@@ -82,7 +82,7 @@ public class OperativaImplementacion implements OperativaInterfaz {
 				for (CitaDto cita : Inicio.lista) {
 					if (cita.getFechaConsulta().toLocalDate().equals(LocalDate.of(anyo, mes, dia))
 							&& cita.getConsulta().equals(especialidad)) {
-						registroInterfaz.escribirRegistro(cita);
+						registroInterfaz.EscribirRegistro(cita);
 						encontrado = true;
 						break;
 					} else {

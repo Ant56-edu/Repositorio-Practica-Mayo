@@ -21,7 +21,7 @@ public class Inicio {
 		MenuInterfaz menuInterfaz = new MenuImplementacion();
 	    RegistroInterfaz registroInterfaz = new RegistroImplementacion();
 	    
-	    registroInterfaz.leerArchivo();
+	    registroInterfaz.LeerArchivo();
         menuInterfaz.mostrarMenu();
 	    
 	}

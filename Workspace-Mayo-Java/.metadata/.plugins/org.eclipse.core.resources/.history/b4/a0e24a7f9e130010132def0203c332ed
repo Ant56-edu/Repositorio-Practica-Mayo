@@ -13,7 +13,7 @@ import controladores.Inicio;
 import dtos.CitaDto;
 
 public class RegistroImplementacion implements RegistroInterfaz{
-	public void leerArchivo()
+	public void LeerArchivo()
     {
         Path ruta = Paths.get("citas.txt");
         try {
@@ -40,7 +40,7 @@ public class RegistroImplementacion implements RegistroInterfaz{
 		}
     }
 
-    public void escribirRegistro(CitaDto cita) {
+    public void EscribirRegistro(CitaDto cita) {
         Path ruta = Paths.get("citasConAsistencia-" + Integer.toString(cita.getFechaConsulta().getDayOfMonth()) + Integer.toString(cita.getFechaConsulta().getMonthValue()) + Integer.toString(cita.getFechaConsulta().getYear()) + "log.txt");
         try {
 			Files.write(ruta, cita.toString().getBytes(), StandardOpenOption.APPEND);

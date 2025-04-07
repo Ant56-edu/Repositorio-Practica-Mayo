@@ -2,8 +2,8 @@ package servicios;
 
 public interface MenuInterfaz {
 	
-    void mostrarMenu();
+    void MostrarMenu();
 
-    void mostrarSubmenu();
+    void MostrarSubmenu();
 
 }

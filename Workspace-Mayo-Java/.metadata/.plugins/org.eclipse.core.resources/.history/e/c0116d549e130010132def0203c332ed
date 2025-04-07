@@ -25,7 +25,7 @@ public class MenuImplementacion implements MenuInterfaz {
                     }
                 case 2:
                     {
-                        mostrarSubmenu();
+                        MostrarSubmenu();
                         break;
                     }
                 default:

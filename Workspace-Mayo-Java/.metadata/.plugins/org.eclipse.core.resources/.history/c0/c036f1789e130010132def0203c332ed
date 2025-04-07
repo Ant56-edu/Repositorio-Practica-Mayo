@@ -4,8 +4,8 @@ import dtos.CitaDto;
 
 public interface RegistroInterfaz
 {
-	void leerArchivo();
+	void LeerArchivo();
 
-	void escribirRegistro(CitaDto cita);
+	void EscribirRegistro(CitaDto cita);
 
 }
