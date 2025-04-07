@@ -20,7 +20,7 @@ public class MenuImplementacion implements MenuInterfaz {
             {
                 case 1:
                     {
-                        operativaInterfaz.RegistroLlegada();
+                        operativaInterfaz.registroLlegada();
                         break;
                     }
                 case 2:
@@ -57,13 +57,13 @@ public class MenuImplementacion implements MenuInterfaz {
                     }
                 case 1:
                     {
-                        operativaInterfaz.MostrarConsultas();
+                        operativaInterfaz.mostrarConsultas();
                         esCerrado = true;
                         break;
                     }
                 case 2:
                     {
-                        operativaInterfaz.ImprimirConsultas();
+                        operativaInterfaz.imprimirConsultas();
                         esCerrado = true;
                         break;
                     }

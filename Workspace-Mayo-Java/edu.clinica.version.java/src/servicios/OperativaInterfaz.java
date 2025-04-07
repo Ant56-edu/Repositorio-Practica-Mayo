@@ -1,10 +1,10 @@
 package servicios;
 
 public interface OperativaInterfaz {
-	void ImprimirConsultas();
+	void imprimirConsultas();
 
-   void MostrarConsultas();
+   void mostrarConsultas();
 
-   void RegistroLlegada();
+   void registroLlegada();
 
 }

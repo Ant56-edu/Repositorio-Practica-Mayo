@@ -15,10 +15,10 @@ import dtos.CitaDto;
 public class RegistroImplementacion implements RegistroInterfaz{
 	public void LeerArchivo()
     {
-        CitaDto cdto = new CitaDto();
         Path ruta = Paths.get("citas.txt");
         try {
 			for (String linea : Files.readAllLines(ruta)) {
+				CitaDto cdto = new CitaDto();
 			    String[] elementos = linea.split(";");
 			    cdto.setId(Inicio.lista.size());
 			    cdto.setDni(elementos[0]);

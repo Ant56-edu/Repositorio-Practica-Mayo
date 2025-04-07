@@ -7,7 +7,7 @@ import dtos.CitaDto;
 public class OperativaImplementacion implements OperativaInterfaz {
 	RegistroInterfaz registroInterfaz = new RegistroImplementacion();
 
-	public void ImprimirConsultas() {
+	public void imprimirConsultas() {
 		byte optUser = 0;
 		boolean esCerrado = false;
 		boolean encontrado = false;
@@ -30,7 +30,7 @@ public class OperativaImplementacion implements OperativaInterfaz {
 				int anyo = Integer.parseInt(fechaString[2]);
 				especialidad = "Psicología";
 				for (CitaDto cita : Inicio.lista) {
-					if (cita.getFechaConsulta().toLocalDate() == LocalDate.of(anyo, mes, dia)
+					if (cita.getFechaConsulta().toLocalDate().equals(LocalDate.of(anyo, mes, dia))
 							&& cita.getConsulta().equals(especialidad)) {
 						registroInterfaz.EscribirRegistro(cita);
 						encontrado = true;
@@ -55,7 +55,7 @@ public class OperativaImplementacion implements OperativaInterfaz {
 				int anyo = Integer.parseInt(fechaString[2]);
 				especialidad = "Traumatología";
 				for (CitaDto cita : Inicio.lista) {
-					if (cita.getFechaConsulta().toLocalDate() == LocalDate.of(anyo, mes, dia)
+					if (cita.getFechaConsulta().toLocalDate().equals(LocalDate.of(anyo, mes, dia))
 							&& cita.getConsulta().equals(especialidad)) {
 						registroInterfaz.EscribirRegistro(cita);
 						encontrado = true;
@@ -80,7 +80,7 @@ public class OperativaImplementacion implements OperativaInterfaz {
 				int anyo = Integer.parseInt(fechaString[2]);
 				especialidad = "Fisioterapia";
 				for (CitaDto cita : Inicio.lista) {
-					if (cita.getFechaConsulta().toLocalDate() == LocalDate.of(anyo, mes, dia)
+					if (cita.getFechaConsulta().toLocalDate().equals(LocalDate.of(anyo, mes, dia))
 							&& cita.getConsulta().equals(especialidad)) {
 						registroInterfaz.EscribirRegistro(cita);
 						encontrado = true;
@@ -105,7 +105,7 @@ public class OperativaImplementacion implements OperativaInterfaz {
 		} while (!esCerrado);
 	}
 
-	public void MostrarConsultas() {
+	public void mostrarConsultas() {
 		byte optUser = 0;
 		boolean esCerrado = false;
 		boolean encontrado = false;
@@ -127,7 +127,7 @@ public class OperativaImplementacion implements OperativaInterfaz {
 				int anyo = Integer.parseInt(fechaString[2]);
 				especialidad = "Psicología";
 				for (CitaDto cita : Inicio.lista) {
-					if (cita.getFechaConsulta().toLocalDate() == LocalDate.of(anyo, mes, dia)
+					if (cita.getFechaConsulta().toLocalDate().equals(LocalDate.of(anyo, mes, dia))
 							&& cita.getConsulta().equals(especialidad)) {
 						System.out.println(cita.toString());
 						encontrado = true;
@@ -152,7 +152,7 @@ public class OperativaImplementacion implements OperativaInterfaz {
 				int anyo = Integer.parseInt(fechaString[2]);
 				especialidad = "Traumatología";
 				for (CitaDto cita : Inicio.lista) {
-					if (cita.getFechaConsulta().toLocalDate() == LocalDate.of(anyo, mes, dia)
+					if (cita.getFechaConsulta().toLocalDate().equals(LocalDate.of(anyo, mes, dia))
 							&& cita.getConsulta().equals(especialidad)) {
 						System.out.println(cita.toString());
 						encontrado = true;
@@ -177,7 +177,7 @@ public class OperativaImplementacion implements OperativaInterfaz {
 				int anyo = Integer.parseInt(fechaString[2]);
 				especialidad = "Fisioterapia";
 				for (CitaDto cita : Inicio.lista) {
-					if (cita.getFechaConsulta().toLocalDate() == LocalDate.of(anyo, mes, dia)
+					if (cita.getFechaConsulta().toLocalDate().equals(LocalDate.of(anyo, mes, dia))
 							&& cita.getConsulta().equals(especialidad)) {
 						System.out.println(cita.toString());
 						encontrado = true;
@@ -202,13 +202,13 @@ public class OperativaImplementacion implements OperativaInterfaz {
 		} while (!esCerrado);
 	}
 
-	public void RegistroLlegada() {
+	public void registroLlegada() {
 		boolean encontrado = false;
 		boolean cerrado = false;
 		do {
 			System.out.println("Introduzca su DNI: ");
 			String dni = Inicio.entrada.next();
-			if (VerificarDni(dni) == true) {
+			if (verificarDni(dni) == true) {
 				for (CitaDto cita : Inicio.lista) {
 					if (cita.getDni() == dni) {
 						System.out.println("Espere su turno para la consulta de " + cita.getConsulta()
@@ -229,7 +229,7 @@ public class OperativaImplementacion implements OperativaInterfaz {
 		} while (!cerrado);
 	}
 
-	public Boolean VerificarDni(String dniAComprobar) {
+	public Boolean verificarDni(String dniAComprobar) {
 		Boolean valido;
 
 		char[] letraDni = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V',
